@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: beige;
+    font-family: 'Lato', sans-serif;
+}
+
+.obal {
+    height: 100%;
+    width: 90%;
+    background-color: bisque;
+    margin: 0 auto;
+    /*vystredit*/
+    display: grid;
+    grid-template-columns: auto 20%;
+    grid-template-rows: 20% 55% auto;
+    grid-template-areas:
+        'h a'
+        'm a'
+        'm f';
+}
+
+header,
+aside,
+footer,
+main {
+    background-color: lightgray;
+    border: 1px solid grey;
+}
+
+/*---------------HLAVICKA--------------------*/
+.header {
+    grid-area: h;
+}
+
+.header .flex-container {
+    display: flex;
+    /*justify-content: space-between;*/
+    align-items: center;
+    height: 100%;
+    /*2 radky, vyrovnano, text a obrazek uprostred podle vysky*/
+    width: 100%;
+}
+
+.box img {
+    height: 120px;
+    width: 160px;
+    margin: 20px;
+    /*background-image: url(images/avion_1.jpg);*/
+    border-radius: 3%;
+}
+
+/*---------------ASIDE--------------------*/
+aside {
+    grid-area: a;
+    display: flex;
+    align-items: center;
+    /*align-content: center;*/
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 18pt;
+    flex-direction: column;
+}
+
+aside a {
+    text-decoration: none;
+    /*sbavime se potrzitka*/
+    color: #272727;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    border: 1px solid #272727; 
+    padding: 10px 10px;
+    position: relative;
+    border-radius: 3%;
+    font-weight: bold;
+    transition: all .30s linear;
+    
+
+}
+
+aside a:hover {
+    color: rgb(15, 119, 153);
+    letter-spacing: 1.25px;
+    text-decoration: underline;
+    top: 8px;
+}
+
+aside ul li {
+
+    margin-left: 30px;
+    margin-bottom: 40px;
+    list-style-type: none;    /*odstranit knofliky u li*/
+    
+
+}
+
+
+aside ul {
+    display: flex;
+    flex-direction: column;
+    justify-items: space-between;
+    /* align-content: center; */
+    justify-content: center;
+    
+
+
+    height: 80%;
+    width: 100%;
+}
+
+
+/*----------------------MAIN--------------------------*/
+main {
+    grid-area: m;
+}
+
+main .text {
+    margin: 20px;
+    justify-content: center;
+    font-size: 19px;
+    text-align: justify;
+    /*zarovnani textu*/
+    text-indent: 2em;
+    /*odsazeni prvniho radku*/
+    line-height: 1.5;
+    /*zmena vysky radku, rozestup mezi radky*/
+}
+
+main h2 {
+    margin: 20px auto;
+    text-align: center;
+}
+.obtekani_zprava{
+    float: left;
+    margin-right: 10px;
+margin-left: 10px;   }
+
+#nahravka {
+    /* width: 170px;
+    position: relative;
+    top: -60px;
+    left: 800px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+video {
+    margin-top: 80px;
+    margin-left: 14px;
+    display: flex;
+    width: 100%;
+    width: 300px;
+}
+.boxes{
+    display: flex;
+}
+.boxes .container{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    width: 1000px;
+    height: 200px;
+}
+
+.b{
+    flex: 1;        
+    padding: 15px 20px; 
+    width: 300px;
+    margin-left: 30px;
+}
+.b img{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.tabulka{
+    margin-left: 50px;
+    margin-top: 80px;
+}
+.nabidka{
+    font-size: 30px;
+}
+.formular{
+display: flex;
+    background-color: antiquewhite;
+    height: 400px;
+    width: 500px;
+    margin-left: 300px;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+.f_contact{
+    display: flex;
+    margin-top: 10px;
+}
+label{
+    margin-right: 10px;
+}
+
+l1{
+    display: flex;  
+}
+label{
+    margin-right: 10px;
+}
+
+/*----------------------FOOTER--------------------------*/
+footer {
+    grid-area: f;
+}
+audio{
+    margin-top: 30px;
+    margin-left: 20px;
+    justify-items: center;
+    width: 250px;
+}
+footer .odstup{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+
+
+/*----------------------MEDIA--------------------------*/
+@media screen and (max-width: 1500px) {
+    audio{
+      width: 140px;}
+      .formular{
+        display: flex;
+          margin-left: 250px;
+            
+        }
+}
+@media screen and (max-width: 1400px) {
+    .boxes .container{
+        display: block;
+        text-align: center;
+    }
+    .b p{
+        font-size: 10px;
+    }
+    .b img{
+        width: 250px;
+        height: 150px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    aside a {
+        padding: 5px 5px;
+        margin-left: 0px;
+    }
+    audio{
+        margin-left: 10px;
+        width: 150px;
+    }
+    .b img{
+        width: 200px;
+        height: 100px;
+        
+    }
+}
+@media screen and (max-width: 1100px) {
+    aside {
+        flex-direction: row;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    /*od 600 do 900 bude v jednem sloupci*/
+    .obal {
+        grid-template-columns: 1fr;
+        grid-template-rows: 15% 60% auto 15%;
+        grid-template-areas:
+            'h'
+            'm'
+            'a'
+            'f';
+    }
+
+    main .text {
+        font-size: 15px;
+    }
+   
+    audio{
+        margin-left: 10px;
+        margin-top: 5px;
+        width: 250px;
+    }
+    .formular{
+        display: flex;
+          margin-left: 50px;
+            
+        }
+
+}
+
+
+@media screen and (max-width: 600px) {
+    main .text {
+        font-size: 13px;
+    }
+    video {
+        margin-top: 20px;
+    }
+    .nabidka{
+        font-size: 20px;
+    }
+    main th{
+        padding: 0 10px;
+        font-size: 14px;
+    }
+    main td{
+        font-size: 13px;
+    }
+    
+    .formular{
+        display: flex;
+           margin-left: 0px;
+            
+        }
+}
